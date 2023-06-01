@@ -14,36 +14,36 @@ function verificar() {
         if (fsex[0].checked) {
             genero = 'Homem'
             if (idade >= 0 && idade < 10) {
-                img.setAttribute('src', 'img/criancamenino.png')
-                genero = 'Criança menina'
+                img.setAttribute('src', 'img/crianca-mno.png')
+                genero = 'uma Criança menino'
             } else if (idade < 21) {
-                // Falta coletar imagem do jovem
-                genero = 'Jovem Homem'
+                img.setAttribute('src', 'img/jovem-h.png')
+                genero = 'um Jovem homem'
             } else if (idade < 50) {
-                img.setAttribute('src', 'img/homemadulto.png')
-                genero = 'Adulto'
+                img.setAttribute('src', 'img/adulto.png')
+                genero = 'um Adulto'
             } else {
                 img.setAttribute('src', 'img/idoso.png')
-                genero = 'Idoso'
+                genero = 'um Idoso'
             }
 
         } else if (fsex[1].checked) {
             genero = 'Mulher'
             if (idade >= 0 && idade < 10) {
-                img.setAttribute('src', 'img/criancamenina.png')
-                genero = 'Criança menina'
+                img.setAttribute('src', 'img/crianca-mna.png')
+                genero = 'uma Criança menina'
             } else if (idade < 21) {
-                // Falta coletar imagem de jovem
-                img.setAttribute('src', '')
-                genero = 'Jovem mulher'
+                img.setAttribute('src', 'img/jovem-m.png')
+                genero = 'uma Jovem mulher'
             } else if (idade < 50) {
-                img.setAttribute('src', 'img/mulheradulta.png')
-                genero = 'adulta'
+                img.setAttribute('src', 'img/adulta.png')
+                genero = 'uma adulta'
             } else {
                 img.setAttribute('src', 'img/idosa.png')
-                genero = 'Idosa'
+                genero = 'uma Idosa'
             }
         }
+        res.style.textAlign = 'center'
         res.innerHTML = `Detectamos ${genero} com ${idade} anos.`
         res.appendChild(img)
     }
